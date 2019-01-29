@@ -1,0 +1,9 @@
+														Docker Commands
+************************************************************************************************************************************************
+$docker info --> To check the Docker setup is working fine
+$docker-compose --version --> To check the version of Docker Compose after Docker setup
+$docker run hello-world --> To run the first Hello World project
+$docker run -it alpine sh --> Runs the lightweight Alpine linux shell/terminal
+
+$docker run docker.io/library/hello-world --> trying to pull and run a docker image from a specific url/namespace.
+	library is the namespace for all official docker images
