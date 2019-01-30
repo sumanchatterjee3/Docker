@@ -1,0 +1,5 @@
+A docker file is read from top to bottom
+#FROM allows you to use a Base Image for your docker Image.
+#FROM is the first non comment instruction
+
+FROM scratch : The docker image is being created from a scratch image. A scratch image is when you make a docker file with no poerating system.

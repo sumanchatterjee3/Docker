@@ -7,3 +7,27 @@ $docker run -it alpine sh --> Runs the lightweight Alpine linux shell/terminal
 
 $docker run docker.io/library/hello-world --> trying to pull and run a docker image from a specific url/namespace.
 	library is the namespace for all official docker images
+	
+$docker-machine env --> Displays the Docker Daemon details  as shown below
+	export DOCKER_TLS_VERIFY="1"
+	export DOCKER_HOST="tcp://192.168.99.100:2376"
+	export DOCKER_CERT_PATH="C:\Users\suman\.docker\machine\machines\default"
+	export DOCKER_MACHINE_NAME="default"
+	export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+	# Run this command to configure your shell:
+	# eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env)
+	
+	
+Build a new docker image: 
+/>docker image build -t web1 .  (dot is the current directory in which the docker file exists.)
+/>docker image inspect web1
+/>docker image ls
+/>docker image build -t web1:1.0 .
+/>docker image rm web1:1.0
+/>docker image tag web1 sumanchatterjee84/web1:latest
+/>docker image push sumanchatterjee84/web1:latest
+/>docker image rm -f 2283 (first four digits of the Image id of the repo that needs to be deleted. (docker image ls))
+/>docker container run -it -p 5000:5000 -e FLASK_APP=app.py web1:1.0
+
+$ docker login (login to docker hub)
+$ docker container ls
